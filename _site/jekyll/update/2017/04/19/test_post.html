@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Test Post</title>
-  <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
+  <meta name="description" content="fpbp">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/jekyll/update/2017/04/19/test_post.html">
@@ -62,19 +62,18 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+    <p>fpbp</p>
 
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="n">runOpMode</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">InterruptedException</span> <span class="o">{</span>
+        <span class="n">waitForTeamStart</span><span class="o">(</span><span class="n">hardwareMap</span><span class="o">,</span> <span class="k">this</span><span class="o">);</span>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+        <span class="n">runAction</span><span class="o">(</span><span class="k">new</span> <span class="n">DriveStraightAction</span><span class="o">(</span><span class="mi">15</span><span class="o">,</span> <span class="n">Constants</span><span class="o">.</span><span class="na">kDriveMinSpeed</span><span class="o">),</span> <span class="k">this</span><span class="o">);</span>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="n">name</span><span class="o">)</span>
-  <span class="n">puts</span> <span class="s">"Hi, #{name}"</span>
-<span class="n">end</span>
-<span class="nf">print_hi</span><span class="p">(</span><span class="err">'</span><span class="n">Tom</span><span class="err">'</span><span class="o">)</span>
-<span class="err">#</span><span class="o">=&gt;</span> <span class="n">prints</span> <span class="err">'</span><span class="n">Hi</span><span class="o">,</span> <span class="n">Tom</span><span class="err">'</span> <span class="n">to</span> <span class="n">STDOUT</span><span class="o">.</span></code></pre></figure>
+        <span class="n">runAction</span><span class="o">(</span><span class="k">new</span> <span class="n">TurnToAngle</span><span class="o">(</span><span class="mi">90</span><span class="o">,</span> <span class="n">Constants</span><span class="o">.</span><span class="na">kDriveMinSpeed</span><span class="o">),</span> <span class="k">this</span><span class="o">);</span>
 
-<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+        <span class="n">finalAction</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
 
 
   </div>
