@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>FTC9889.github.io</title>
-		<link href="FTC9889.github.io_files/style.css" rel="stylesheet">
-	</head>
+---
+layout: default
+---
 
-	<body>
-		<div class="container markdown-body">
-			<h1 id="ftc9889githubio">
-				FTC9889.github.io
-			</h1>
-		</div>
-		  
+<div class="home">
 
-	</body>
+  <h1 class="page-heading">Posts</h1>
 
-</html>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
